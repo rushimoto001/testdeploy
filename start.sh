@@ -6,4 +6,7 @@ rm -rf .git
 cp -r . ..
 cd -
 rm -rf tmp
-python3 update.py && python3 -m bot & sleep 115m && kill $!
+sudo docker-compose up
+sudo docker-compose up --build
+sudo docker-compose start
+
