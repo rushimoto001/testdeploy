@@ -5,8 +5,6 @@ jobs:
     docker:
       - image:  anasty17/mltb:latest
     resource_class: large
-      environment:
-          ENV: CI
           
     steps:
       - checkout
