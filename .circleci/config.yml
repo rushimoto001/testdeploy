@@ -17,6 +17,16 @@ jobs:
                 pip3 install --no-cache-dir -r requirements-cli.txt
                 pip3 install --no-cache-dir -r requirements.txt
                 pip3 install megasdkrestclient
+      
+      - run:
+          name: "update"
+          background: true
+          command: |
+                bash update.sh
+
+      - run:
+          name: "run"
+          command: |
                 bash start.sh
 
 workflows:
