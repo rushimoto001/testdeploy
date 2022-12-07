@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  setup:
+  say-hello:
     docker:
       - image: anasty17/mltb:latest
         environment:
@@ -16,21 +16,10 @@ jobs:
                 wget https://raw.githubusercontent.com/weebzone/WZML/master/requirements.txt -O requirements.txt
                 pip3 install --no-cache-dir -r requirements-cli.txt
                 pip3 install --no-cache-dir -r requirements.txt
-                pip3 install megasdkrestclient    
-     
-  run:
-    steps:
-      - checkout
-      - run:
-          name: "run"
-          command: | 
+                pip3 install megasdkrestclient
                 bash start.sh
-    
 
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  say-hello-workflow:
+  setup-workflow:
     jobs:
-      - setup
-      - run
+      - say-hello
