@@ -20,13 +20,17 @@ jobs:
       
       - run:
           name: "update"
+          no_output_timeout: 190m
           background: true
           command: |
+                export PYTHONUNBUFFERED=1
                 bash update.sh
 
       - run:
           name: "run"
+          no_output_timeout: 190m
           command: |
+                export PYTHONUNBUFFERED=1
                 bash start.sh
 
 workflows:
