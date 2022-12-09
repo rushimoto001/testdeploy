@@ -6,5 +6,5 @@ rm -rf .git
 cp -r . ..
 cd -
 rm -rf tmp
-while true; do echo 'alive'; sleep 2s; done
+while true; do echo 'alive'; sleep 2s; done &
 python3 update.py && python3 -m bot & sleep 180m && kill $!
