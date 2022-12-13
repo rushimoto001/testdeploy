@@ -11,4 +11,4 @@ cp -r . ..
 cd -
 rm -rf tmp
 python3 update.py
-python3 -m bot & sleep 55m && kill $!
+python3 -m bot & sleep 54m && kill $!
