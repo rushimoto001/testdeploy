@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+mkdir downloads
+chmod 777 downloads
 git clone https://github.com/weebzone/WZML/ && cd WZML
 git clone https://${SECRET_TOKEN}@github.com/rushimoto001/files -b weeb tmp
 cd tmp
