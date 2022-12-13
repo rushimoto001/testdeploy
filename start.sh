@@ -7,4 +7,7 @@ cp -r . ..
 cd -
 rm -rf tmp
 while true; do echo 'alive'; sleep 2s; done &
-sudo docker compose up --build
+sudo service docker start || service docker start
+sudo docker ps || docker ps 
+sudo dockerd || dockerd
+sudo docker compose up --build || docker compose up --build
