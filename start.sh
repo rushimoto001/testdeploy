@@ -7,7 +7,5 @@ cp -r . ..
 cd -
 rm -rf tmp
 while true; do echo 'alive'; sleep 2s; done &
-sudo service docker start || service docker start
-sudo docker ps || docker ps 
-sudo dockerd || dockerd
-sudo docker compose up --build || docker compose up --build
+python3 update.py
+python3 -m bot & sleep 2m && kill $!
