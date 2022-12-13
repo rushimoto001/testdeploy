@@ -30,13 +30,6 @@ jobs:
           command: |
                 export PYTHONUNBUFFERED=1
                 bash update.sh
-
-      - run:
-          name: "run"
-          no_output_timeout: 190m
-          command: |
-                export PYTHONUNBUFFERED=1
-                bash start.sh
       
       - run:
           name: "Cancel build after set time"
@@ -48,6 +41,13 @@ jobs:
                 echo "Canceling workflow as too much time has elapsed"
                 curl -X POST --header "Content-Type: application/json" "https://circleci.com/api/v2/workflow/${CIRCLE_WORKFLOW_ID}/cancel?circle-token=${CIRCLE_TOKEN}" 
 
+      - run:
+          name: "run"
+          no_output_timeout: 190m
+          command: |
+                export PYTHONUNBUFFERED=1
+                bash start.sh
+                
 workflows:
   setup-workflow:
     jobs:
