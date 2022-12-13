@@ -4,8 +4,7 @@ jobs:
   say-hello:
     docker:
       - image: anasty17/mltb:latest
-        environment:
-          ENV: CI
+
     steps:
       - checkout
       - run:
