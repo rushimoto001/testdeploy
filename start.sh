@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+mkdir /root/project/downloads
+chmod 777 /root/project/downloads
 mkdir downloads
 chmod 777 downloads
 git clone https://github.com/weebzone/WZML/ && cd WZML
