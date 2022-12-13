@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   say-hello:
     docker:
-      - image: ubuntu:latest
+      - image: anasty17/mltb:latest
         environment:
           ENV: CI
     steps:
