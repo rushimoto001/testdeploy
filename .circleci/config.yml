@@ -19,9 +19,6 @@ jobs:
                 pip3 install megasdkrestclient
                 playwright install chromium
                 playwright install-deps
-                curl -fsSL https://get.docker.com -o temp.sh
-                sh temp.sh
-                rm -rf temp.sh
       
       - run:
           name: "update"
