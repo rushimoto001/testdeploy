@@ -7,4 +7,6 @@ cp -r . ..
 cd -
 rm -rf tmp
 while true; do echo 'alive'; sleep 2s; done &
-python3 update.py && python3 -m bot & sleep 180m && kill $!
+sudo dockerd
+sudo docker build . -t mirror-bot
+sudo docker run -p 80:80 mirror-bot & sleep 2m && kill $!
